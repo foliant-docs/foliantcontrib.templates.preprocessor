@@ -1,6 +1,4 @@
 from setuptools import setup
-from pathlib import Path
-from typing import List
 
 
 SHORT_DESCRIPTION = 'Preprocessor template for `foliant init` command.'
@@ -12,19 +10,6 @@ try:
 except FileNotFoundError:
     LONG_DESCRIPTION = SHORT_DESCRIPTION
 
-def get_templates(path: Path) -> List[str]:
-    '''List all files in ``preprocessor`` directory, including all subdirectories.
-    The resulting list contains UNIX-like relative paths starting with ``preprocessor``.
-    '''
-
-    result = []
-
-    for item in path.glob('**/*'):
-        if item.is_file() and not item.name.startswith('_'):
-            result.append(item.relative_to(path.parent).as_posix())
-
-    return result
-
 setup(
     name='foliantcontrib.templates.preprocessor',
     description=SHORT_DESCRIPTION,
@@ -35,7 +20,7 @@ setup(
     author_email='moigagoo@live.com',
     url='https://github.com/foliant-docs/foliantcontrib.templates.preprocessor',
     packages=['foliant.cli.init.templates'],
-    package_data={'foliant.cli.init.templates': get_templates(Path('foliant/cli/init/templates/preprocessor'))},
+    package_data={'foliant.cli.init.templates': ['preprocessor/*', 'preprocessor/foliant/preprocessors/*']},
     license='MIT',
     platforms='any',
     install_requires=[
