@@ -10,7 +10,6 @@ try:
 except FileNotFoundError:
     LONG_DESCRIPTION = SHORT_DESCRIPTION
 
-
 setup(
     name='foliantcontrib.templates.preprocessor',
     description=SHORT_DESCRIPTION,
@@ -21,10 +20,11 @@ setup(
     author_email='moigagoo@live.com',
     url='https://github.com/foliant-docs/foliantcontrib.templates.preprocessor',
     packages=['foliant.cli.init.templates'],
+    package_data={'foliant.cli.init.templates': ['preprocessor/*', 'preprocessor/foliant/preprocessors/*']},
     license='MIT',
     platforms='any',
     install_requires=[
-        'foliantcontrib.init>=1.0.4'
+        'foliantcontrib.init>=1.0.5'
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
