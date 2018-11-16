@@ -8,7 +8,7 @@ $ foliant init -t preprocessor
 ## Installation
 
 ```shell
-$ pip install foliantcontrib.templates.preprocessor
+$ pip install --no-compile foliantcontrib.templates.preprocessor
 ```
 
 ## Usage
