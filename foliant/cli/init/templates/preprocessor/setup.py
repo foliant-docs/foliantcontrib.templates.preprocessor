@@ -19,11 +19,11 @@ setup(
     author='Your Name',
     author_email='your@email.com',
     url='https://example.com',
-    packages=['foliantcontrib.preprocessors'],
+    packages=['foliant.preprocessors'],
     license='MIT',
     platforms='any',
     install_requires=[
-        'foliant>=1.0.4'
+        'foliant>=1.0.8'
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

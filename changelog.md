@@ -1,3 +1,8 @@
+# 1.0.3
+
+-   Fix `packages` value in `setup.py` of the template: use `foliant.preprocessors` instead of `foliantcontrib.preprocessors`.
+-   Require Foliant 1.0.8 in `setup.py` of the template.
+
 # 1.0.2
 
 -   Require foliantcontrib.init 1.0.7, import the `output()` method.
